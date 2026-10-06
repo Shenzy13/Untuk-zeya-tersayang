@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Untuk Zeya — A Little Apology ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'DM Sans',sans-serif}
+body{overflow-x:hidden;color:#fff;background:#09040b}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,#531a42 0,transparent 35%),radial-gradient(circle at 15% 90%,#34134b 0,transparent 35%),linear-gradient(145deg,#080309,#180914 55%,#09040d);z-index:-3}
+.stars{position:fixed;inset:0;z-index:-2;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:31px 31px;opacity:.15}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px 15px}
+.screen{width:min(480px,100%);text-align:center}
+.envelope-wrap{perspective:1000px;cursor:pointer}
+.envelope{position:relative;width:280px;height:190px;margin:0 auto 25px;transform-style:preserve-3d;transition:1s}
+.env-body{position:absolute;inset:0;border-radius:8px 8px 18px 18px;background:linear-gradient(145deg,#ff78b9,#9d2d69);box-shadow:0 25px 70px #0008;overflow:hidden}
+.env-body:before,.env-body:after{content:"";position:absolute;bottom:0;border-style:solid}
+.env-body:before{left:0;border-width:0 140px 105px 0;border-color:transparent #d94a8d transparent transparent}
+.env-body:after{right:0;border-width:105px 140px 0 0;border-color:#e85a9b transparent transparent transparent}
+.flap{position:absolute;z-index:4;top:0;left:0;width:0;height:0;border-left:140px solid transparent;border-right:140px solid transparent;border-top:105px solid #ff9dcc;transform-origin:top;transition:1s}
+.letter{position:absolute;z-index:2;left:18px;right:18px;bottom:10px;height:145px;border-radius:10px;background:#fff8fb;color:#4c1b38;padding:20px;box-shadow:0 5px 20px #0003;transition:1s}
+.letter b{font-family:'Playfair Display';font-size:21px}.letter small{display:block;margin-top:8px;color:#8a5570}
+.open .flap{transform:rotateX(180deg);z-index:1}.open .letter{transform:translateY(-95px);z-index:5}
+.hint{color:#eac5d9;font-size:13px;animation:pulse 1.7s infinite}
+.hidden{display:none}
+.card{padding:25px 19px;border:1px solid #ffffff22;border-radius:30px;background:#ffffff0d;backdrop-filter:blur(18px);box-shadow:0 25px 80px #0008}
+.badge{display:inline-block;padding:7px 12px;border-radius:99px;background:#ff74b51c;color:#ffc4df;font-size:11px}
+h1{font:700 34px/1.12 'Playfair Display';margin:13px 0 5px}
+.sub{font-size:13px;color:#dcb9cc;margin-bottom:17px}
+.photo{width:155px;height:155px;border-radius:50%;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#5c1d47,#23102e);border:4px solid #ffb6d6aa;box-shadow:0 0 0 9px #ff74b512,0 18px 45px #0007;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}.photo span{font-size:48px}
+#typing{text-align:left;min-height:270px;font-size:14.5px;line-height:1.85;color:#f9e7f0}
+.cursor{display:inline-block;width:2px;height:17px;background:#ff9ac8;animation:blink .7s infinite}
+.divider{height:1px;background:#fff1;margin:16px 0}
+.quote{color:#ffd1e4;font-size:13px;line-height:1.65}
+.buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+button{border:0;border-radius:99px;padding:13px 18px;font-weight:700;font-size:14px;cursor:pointer}
+.yes{color:#fff;background:linear-gradient(135deg,#ff559f,#ff8fc3);box-shadow:0 10px 30px #ff559f4d}
+.music{color:#fff;background:#ffffff12;border:1px solid #fff2}
+.answer{display:none;margin-top:20px;padding:18px;border-radius:20px;background:#ff72b516;border:1px solid #ffacd033;line-height:1.7;font-size:14px}
+.file{margin-top:14px;font-size:11px;color:#cba6ba}.file input{display:none}
+.heart{position:fixed;bottom:-40px;pointer-events:none;animation:up linear forwards;z-index:1}
+.confetti{position:fixed;top:45%;left:50%;width:8px;height:8px;pointer-events:none;z-index:10;animation:burst 1.5s ease-out forwards}
+@keyframes up{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.8}100%{transform:translateY(-115vh) rotate(30deg) scale(1.3);opacity:0}}
+@keyframes blink{50%{opacity:0}}@keyframes pulse{50%{transform:scale(1.03);opacity:.65}}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) rotate(720deg);opacity:0}}
+@media(max-width:390px){h1{font-size:29px}.photo{width:135px;height:135px}#typing{min-height:300px}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<section class="page" id="intro">
+  <div class="screen">
+    <div class="envelope-wrap" onclick="openLetter()">
+      <div class="envelope" id="env">
+        <div class="env-body"></div><div class="flap"></div>
+        <div class="letter"><b>Untuk Zeya ❤️</b><small>Ada sesuatu yang mau aku sampaikan...</small></div>
+      </div>
+    </div>
+    <div class="hint">tap amplopnya untuk buka 💌</div>
+  </div>
+</section>
+
+<section class="page hidden" id="main">
+  <div class="screen card">
+    <div class="badge">a message from my heart</div>
+    <h1>I'm really sorry, Zeya.</h1>
+    <div class="sub">aku harap kamu baca sampai selesai...</div>
+
+    <div class="photo"><span>🫶🏻</span><img id="img" alt="Foto"></div>
+
+    <div id="typing"></div><span class="cursor"></span>
+    <div class="divider"></div>
+    <div class="quote">Aku nggak mau memaksa kamu langsung baik-baik aja. Aku cuma ingin kesempatan untuk memperbaiki apa yang sudah aku salahkan.</div>
+
+    <div class="buttons">
+      <button class="yes" onclick="forgive()">Iya aku maafin ❤️</button>
+      <button class="music" id="music" onclick="music()">🎵 Putar musik</button>
+    </div>
+
+    <label class="file">📷 Tambahkan foto dari galeri
+      <input type="file" id="file" accept="image/*">
+    </label>
+
+    <div class="answer" id="answer">
+      <b>🥺 Makasih, Zeya.</b><br>
+      Aku bakal lebih jaga sikap, lebih menghargai perasaan kamu, dan buktiin semuanya lewat tindakan.
+      <br><br><b>I love you, sayangku. ❤️</b>
+    </div>
+  </div>
+</section>
+
+<script>
+function openLetter(){
+  document.getElementById('env').classList.add('open');
+  setTimeout(()=>{
+    document.getElementById('intro').classList.add('hidden');
+    document.getElementById('main').classList.remove('hidden');
+    type();
+  },950);
+}
+const text=`Aku minta maaf ya, Zeya sayang. ❤️
+
+I love you, sayangku, cintaku, lucuku, imutku, manisku.
+
+Aku tahu kesalahan aku sangat fatal sampai bikin kamu nggak mood sama aku, dan mungkin rasa sayang serta cinta kamu ke aku jadi berkurang.
+
+Aku sadar aku salah. Aku nggak mau cuma bilang “maaf” lalu mengulang kesalahan yang sama.
+
+Aku mau belajar. Aku mau berubah. Dan aku mau buktiin lewat sikap, bukan cuma kata-kata.
+
+Maafin aku ya, Zeya. Aku sayang banget sama kamu. ❤️`;
+let i=0;
+function type(){
+ if(i<text.length){
+  document.getElementById('typing').innerHTML=text.slice(0,i+1).replace(/\n/g,'<br>');
+  i++;setTimeout(type,text[i-1]==='.'?60:21);
+ }
+}
+function heart(){
+ const h=document.createElement('div');h.className='heart';
+ h.textContent=['❤️','💗','💖','💕','✨'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';h.style.fontSize=15+Math.random()*23+'px';
+ h.style.animationDuration=5+Math.random()*5+'s';document.body.appendChild(h);
+ setTimeout(()=>h.remove(),11000);
+}
+setInterval(heart,650);
+
+function forgive(){
+ document.getElementById('answer').style.display='block';
+ for(let n=0;n<55;n++){
+  const c=document.createElement('div');c.className='confetti';
+  c.style.setProperty('--x',(Math.random()*500-250)+'px');
+  c.style.setProperty('--y',(Math.random()*650-325)+'px');
+  c.style.background=['#ff72b5','#ffd1e5','#fff','#c78cff'][n%4];
+  c.style.borderRadius=Math.random()>.5?'50%':'2px';
+  document.body.appendChild(c);setTimeout(()=>c.remove(),1600);
+ }
+ navigator.vibrate?.([40,30,70]);
+}
+document.getElementById('file').addEventListener('change',e=>{
+ const f=e.target.files[0];if(!f)return;
+ const img=document.getElementById('img');img.src=URL.createObjectURL(f);img.style.display='block';
+ document.querySelector('.photo span').style.display='none';
+});
+
+let ctx=null,playing=false,timer=null;
+function music(){
+ const b=document.getElementById('music');
+ if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
+ if(playing){clearInterval(timer);playing=false;b.textContent='🎵 Putar musik';return}
+ playing=true;b.textContent='⏸️ Matikan musik';
+ const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let k=0;
+ function note(){
+  const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=notes[k++%notes.length];
+  g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.045,ctx.currentTime+.04);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.65);
+  o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.7);
+ }
+ note();timer=setInterval(note,700);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Untuk Zeya ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:'DM Sans',sans-serif}
+body{
+  min-height:100vh;overflow-x:hidden;color:#fff;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(255,105,180,.28),transparent 28%),
+    radial-gradient(circle at 85% 85%,rgba(174,80,255,.25),transparent 30%),
+    linear-gradient(145deg,#100711,#260d22 48%,#120817);
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px;position:relative;z-index:2}
+.card{
+  width:min(470px,100%);padding:25px 20px 22px;border-radius:32px;
+  background:rgba(255,255,255,.085);border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 25px 80px rgba(0,0,0,.45);backdrop-filter:blur(18px);
+  text-align:center;
+}
+.badge{display:inline-block;padding:7px 13px;border-radius:999px;background:rgba(255,125,185,.13);color:#ffc2df;font-size:12px;margin-bottom:13px}
+h1{font:700 34px/1.1 'Playfair Display',serif;margin:0 0 8px}
+.sub{color:#eacddb;font-size:13px;margin-bottom:18px}
+.photo{
+  width:170px;height:170px;margin:0 auto 20px;border-radius:50%;overflow:hidden;
+  border:4px solid rgba(255,180,215,.65);box-shadow:0 0 0 8px rgba(255,120,180,.08),0 15px 45px rgba(0,0,0,.4);
+  background:linear-gradient(135deg,#5d183f,#27102f);display:flex;align-items:center;justify-content:center;
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}
+.photo span{font-size:52px}
+#typing{min-height:220px;text-align:left;color:#faeaf2;font-size:15px;line-height:1.8}
+.cursor{display:inline-block;width:2px;height:17px;background:#ff9fc9;vertical-align:-3px;animation:blink .7s infinite}
+.quote{margin-top:16px;padding:13px 15px;border-left:3px solid #ff82b8;background:rgba(255,255,255,.05);border-radius:0 14px 14px 0;color:#ffd3e7;font-size:13px;text-align:left}
+.buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+button{
+  border:0;padding:13px 19px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer;
+  transition:.2s transform,.2s box-shadow;
+}
+button:active{transform:scale(.95)}
+.yes{background:linear-gradient(135deg,#ff5eaa,#ff82c1);color:#fff;box-shadow:0 10px 28px rgba(255,90,170,.3)}
+.music{background:rgba(255,255,255,.09);color:#fff;border:1px solid rgba(255,255,255,.17)}
+.upload{display:inline-block;margin-top:14px;font-size:11px;color:#dcb4c9;cursor:pointer}
+.upload input{display:none}
+#answer{display:none;margin-top:19px;padding:17px;border-radius:20px;background:rgba(255,110,180,.1);color:#ffdbea;line-height:1.7;font-size:14px}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.heart{position:absolute;bottom:-50px;animation:floatUp linear forwards;opacity:0}
+.ring{position:absolute;inset:0;pointer-events:none}
+.spark{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffd2e6;animation:spark 2.5s infinite}
+@keyframes blink{50%{opacity:0}}
+@keyframes floatUp{0%{transform:translateY(0) scale(.7) rotate(0);opacity:0}15%{opacity:.75}100%{transform:translateY(-115vh) scale(1.3) rotate(30deg);opacity:0}}
+@keyframes spark{0%,100%{transform:scale(.3);opacity:.1}50%{transform:scale(1.4);opacity:.9}}
+@media(max-width:390px){h1{font-size:29px}.photo{width:145px;height:145px}#typing{font-size:14px;min-height:245px}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+<div class="wrap">
+<div class="card">
+  <div class="badge">a little message from me to you 💌</div>
+  <h1>Untuk Zeya, sayangku ❤️</h1>
+  <div class="sub">baca sampai selesai ya...</div>
+
+  <div class="photo" id="photo">
+    <span>🫶🏻</span>
+    <img id="photoImg" alt="Foto Zeya">
+  </div>
+
+  <div id="typing"></div><span class="cursor"></span>
+
+  <div class="quote">Aku nggak berharap kamu langsung melupakan semuanya. Aku cuma ingin kesempatan untuk memperbaiki kesalahanku.</div>
+
+  <div class="buttons">
+    <button class="yes" onclick="forgive()">Iya aku maafin ❤️</button>
+    <button class="music" onclick="toggleMusic()" id="musicBtn">🎵 Putar musik</button>
+  </div>
+
+  <label class="upload">
+    📷 Tambahkan foto dari HP
+    <input type="file" id="photoInput" accept="image/*">
+  </label>
+
+  <div id="answer">
+    <b>🥺 Makasih, Zeya.</b><br>
+    Aku bakal lebih menghargai kamu, lebih jaga sikap, dan buktiin semuanya lewat tindakan.
+    I love you, sayangku. ❤️
+  </div>
+</div>
+</div>
+
+<script>
+const text = `Aku minta maaf ya, Zeya sayang. ❤️
+
+I love you, sayangku, cintaku, lucuku, imutku, manisku.
+
+Aku tahu kesalahan aku sangat fatal sampai bikin kamu nggak mood sama aku, bahkan mungkin bikin rasa sayang dan cinta kamu ke aku berkurang.
+
+Aku benar-benar sadar kalau aku salah. Aku nggak mau cuma minta maaf lewat kata-kata, tapi aku mau belajar dari kesalahan ini dan buktiin lewat sikap.
+
+Maafin aku ya, Zeya. Aku sayang banget sama kamu. ❤️`;
+
+let i=0;
+function typeText(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML=text.slice(0,i+1).replace(/\n/g,"<br>");
+    i++;
+    setTimeout(typeText,text[i-1]==="."?55:22);
+  }
+}
+setTimeout(typeText,700);
+
+function forgive(){
+  document.getElementById("answer").style.display="block";
+  burst();
+  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+
+function heart(){
+  const h=document.createElement("div"); h.className="heart";
+  h.textContent=["❤️","💗","💖","💕","✨"][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+"%";
+  h.style.fontSize=(15+Math.random()*22)+"px";
+  h.style.animationDuration=(5+Math.random()*5)+"s";
+  document.getElementById("hearts").appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+}
+setInterval(heart,650);
+
+function burst(){
+  for(let n=0;n<24;n++){
+    setTimeout(()=>{
+      const h=document.createElement("div"); h.className="heart";
+      h.textContent="💖"; h.style.left=(35+Math.random()*30)+"%";
+      h.style.bottom=(25+Math.random()*20)+"%";
+      h.style.fontSize=(18+Math.random()*18)+"px";
+      h.style.animationDuration=(2+Math.random()*2)+"s";
+      document.getElementById("hearts").appendChild(h);
+      setTimeout(()=>h.remove(),5000);
+    },n*45);
+  }
+}
+
+for(let n=0;n<18;n++){
+  const s=document.createElement("div");s.className="spark";
+  s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=Math.random()*3+"s";document.body.appendChild(s);
+}
+
+// Foto dipilih langsung dari galeri HP, tidak diupload ke mana pun.
+document.getElementById("photoInput").addEventListener("change",e=>{
+  const file=e.target.files[0]; if(!file)return;
+  const url=URL.createObjectURL(file);
+  const img=document.getElementById("photoImg");
+  img.src=url;img.style.display="block";
+  document.querySelector(".photo span").style.display="none";
+});
+
+// Musik lembut dibuat oleh browser, jadi tidak membutuhkan file musik eksternal.
+let audioCtx=null, playing=false, timer=null;
+function toggleMusic(){
+  const btn=document.getElementById("musicBtn");
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(playing){clearInterval(timer);playing=false;btn.textContent="🎵 Putar musik";return}
+  playing=true;btn.textContent="⏸️ Matikan musik";
+  const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];
+  let k=0;
+  const play=()=>{
+    const o=audioCtx.createOscillator(),g=audioCtx.createGain();
+    o.type="sine";o.frequency.value=notes[k++%notes.length];
+    g.gain.setValueAtTime(.0001,audioCtx.currentTime);
+    g.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+.04);
+    g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.65);
+    o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.7);
+  };
+  play();timer=setInterval(play,700);
+}
+</script>
+</body>
+</html>

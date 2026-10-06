@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Zeya ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:24px;overflow:hidden;font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#160b18,#3b1027,#190b22);
+  color:#fff;
+}
+.card{
+  width:min(430px,100%);padding:30px 24px;text-align:center;
+  border:1px solid rgba(255,255,255,.18);border-radius:28px;
+  background:rgba(255,255,255,.09);backdrop-filter:blur(14px);
+  box-shadow:0 20px 60px rgba(0,0,0,.4);position:relative;z-index:2;
+}
+.heart{font-size:58px;animation:pulse 1.4s infinite;margin-bottom:12px}
+h1{font-size:30px;margin-bottom:18px}
+p{font-size:16px;line-height:1.75;color:#f9e9f1}
+.highlight{color:#ff9fc8;font-weight:bold}
+button{
+  margin-top:22px;border:0;border-radius:999px;padding:13px 25px;
+  background:#ff6fae;color:white;font-size:15px;font-weight:bold;
+  box-shadow:0 8px 25px rgba(255,105,170,.35);cursor:pointer;
+}
+#extra{display:none;margin-top:20px;font-size:15px;line-height:1.7}
+.float{
+  position:absolute;bottom:-40px;font-size:22px;opacity:.7;
+  animation:up linear infinite;
+}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@keyframes up{
+  from{transform:translateY(0) rotate(0);opacity:0}
+  15%{opacity:.8}to{transform:translateY(-115vh) rotate(25deg);opacity:0}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="heart">❤️</div>
+  <h1>Untuk Zeya, sayangku</h1>
+
+  <p>
+    Aku minta maaf ya, <span class="highlight">Zeya sayang</span>.<br><br>
+    I love you, sayangku, cintaku, lucuku, imutku, manisku.
+    Aku tahu kesalahan aku sangat fatal sampai bikin kamu nggak mood sama aku
+    dan mungkin rasa sayang serta cinta kamu ke aku jadi berkurang.
+    <br><br>
+    Aku benar-benar minta maaf ya. Aku sadar aku salah dan aku nggak mau
+    menganggap remeh perasaan kamu. Aku bakal berusaha belajar dari kesalahan
+    ini dan buktiin lewat sikap, bukan cuma lewat kata-kata.
+  </p>
+
+  <button onclick="showMessage()">Maafin aku ya? 🥺</button>
+
+  <div id="extra">
+    Aku nggak maksa kamu buat langsung baik-baik aja.
+    Aku cuma berharap masih ada kesempatan buat aku memperbaiki semuanya.
+    <br><br>
+    <b>I'm really sorry, Zeya. I love you. ❤️</b>
+  </div>
+</div>
+
+<script>
+function showMessage(){
+  const x=document.getElementById("extra");
+  x.style.display="block";
+  document.querySelector("button").innerText="Makasih udah baca ❤️";
+}
+for(let i=0;i<18;i++){
+  const h=document.createElement("div");
+  h.className="float";
+  h.innerText=Math.random()>.35?"❤️":"💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(5+Math.random()*7)+"s";
+  h.style.animationDelay=(-Math.random()*10)+"s";
+  h.style.fontSize=(15+Math.random()*20)+"px";
+  document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
